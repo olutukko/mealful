@@ -2,13 +2,16 @@ import React, { Component } from 'react';
 import { View, Text } from 'react-native';
 
 class Recipe {
-  constructor(title, ingredients, instructions) {
+  constructor(id, title, image) {
+    this.id = id;
     this.title = title;
-    this.ingredients = ingredients;
-    this.instructions = instructions;
+    this.image = image;
   }
 }
 
+export default Recipe;
+
+/*
 class App extends Component {
   constructor(props) {
     super(props);
@@ -57,3 +60,4 @@ class App extends Component {
 }
 
 export default App;
+*/
