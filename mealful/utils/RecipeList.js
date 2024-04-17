@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import { View, Text } from 'react-native';
 
-class Recipe {
+class RecipeList {
   constructor(id, title, image) {
     this.id = id;
     this.title = title;
@@ -9,7 +9,7 @@ class Recipe {
   }
 }
 
-export default Recipe;
+export default RecipeList;
 
 /*
 class App extends Component {

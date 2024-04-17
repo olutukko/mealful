@@ -1,6 +1,6 @@
-import Recipe from '../utils/Recipe';
+import RecipeList from '../utils/RecipeList';
 
-class RecipesService {
+class RecipesListService {
   constructor(apiKey) {
     this.apiKey = apiKey;
     this.apiUrl = 'https://api.spoonacular.com/recipes';
@@ -12,7 +12,7 @@ class RecipesService {
       const response = await fetch(url);
       const data = await response.json();
       const recipes = data.results.map((result) => {
-        return new Recipe(result.id, result.title, result.image);
+        return new RecipeList(result.id, result.title, result.image);
       });
       
       return recipes;
@@ -23,4 +23,4 @@ class RecipesService {
   }
 }
 
-export default RecipesService;
+export default RecipesListService;
