@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { StyleSheet, View, Text, Image, ScrollView } from "react-native";
-import { globalStyles } from "../styles/global";
-import RecipesInfoService from '../services/recipesInfoService'; // Import RecipesInfoService
+import { globalStyles } from "../styles/Global";
+import RecipesInfoService from '../services/RecipesInfoService'; // Import RecipesInfoService
 
 export default function Recipe({ route, navigation }) {
     const [recipe, setRecipe] = useState(null);
@@ -29,8 +29,7 @@ export default function Recipe({ route, navigation }) {
             <Text>{recipe.title}</Text>
             <Image source={{ uri: image }} style={{ width: 100, height: 100 }} />
             <Image source={{ uri: recipe.image }} style={{ width: 100, height: 100 }} />
-            <Text>Vegetarian: {recipe.vegetarian ? 'Yes' : 'No'}</Text>
-            <Text>Vegan: {recipe.vegan ? 'Yes' : 'No'}</Text>
+            <Text>{recipe.vegan ? 'Vegan' : recipe.vegetarian ? 'Vegetarian' : ''}</Text>
             <Text>Ingredients:</Text>
             {recipe.ingredients.map((ingredient, index) => (
                 <Text key={index}>{ingredient}</Text>

@@ -1,6 +1,6 @@
 import * as React from "react";
 import { StyleSheet, View, Text } from "react-native";
-import { globalStyles } from "../styles/global";
+import { globalStyles } from "../styles/Global";
 
 
 export default function Search({navigation}) {

@@ -7,12 +7,17 @@ class RecipesListService {
   }
 
   async fetchRecipes(criteria) {
-    const url = `${this.apiUrl}/${criteria}?apiKey=${this.apiKey}`;
+    const url = `${this.apiUrl}/${criteria}&apiKey=${this.apiKey}`;
+    console.log(url);
     try {
       const response = await fetch(url);
       const data = await response.json();
       const recipes = data.results.map((result) => {
-        return new RecipeList(result.id, result.title, result.image);
+        return new RecipeList({
+          id: result.id,
+          title: result.title,
+          image: result.image
+        });
       });
       
       return recipes;
