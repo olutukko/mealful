@@ -8,7 +8,6 @@ export default StyleSheet.create({
     },
     title: {
         fontSize: 15,
-        marginTop: 10,
         marginBottom: 5,
         alignSelf: 'center',
     },
