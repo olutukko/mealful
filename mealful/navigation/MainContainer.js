@@ -8,14 +8,14 @@ import { Ionicons } from '@expo/vector-icons';
 
 //Screens
 import Home from '../screens/Home';
-import Filters from '../screens/Filters';
+
 import Search from '../screens/Search';
 import Settings from '../screens/Settings';
 import Recipe from '../screens/Recipe';
 
 //Screen names
 const homeName = 'Home';
-const listName = 'Filters';
+
 const settingsName = 'Settings';
 const searchName = 'Search';
 const recipeName = 'Recipe';
@@ -45,8 +45,6 @@ export default function MainContainer() {
 
             if (rn === homeName) {
               iconName = focused ? 'home' : 'home-outline';
-            } else if (rn === listName) {
-              iconName = focused ? 'list' : 'list-outline';
             } else if (rn === settingsName) {
               iconName = focused ? 'settings' : 'settings-outline';
             } else if (rn === searchName) {
@@ -63,7 +61,6 @@ export default function MainContainer() {
       >
         <Tab.Screen name={homeName} component={HomeStackScreen}/>
         <Tab.Screen name={searchName} component={Search}/>
-        <Tab.Screen name={listName} component={Filters}/>
         <Tab.Screen name={settingsName} component={Settings}/>
       </Tab.Navigator>
     </NavigationContainer>
