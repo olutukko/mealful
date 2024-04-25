@@ -8,14 +8,12 @@ import { Ionicons } from '@expo/vector-icons';
 
 //Screens
 import Home from '../screens/Home';
-
 import Search from '../screens/Search';
 import Settings from '../screens/Settings';
 import Recipe from '../screens/Recipe';
 
 //Screen names
 const homeName = 'Home';
-
 const settingsName = 'Settings';
 const searchName = 'Search';
 const recipeName = 'Recipe';
