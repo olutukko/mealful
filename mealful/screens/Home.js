@@ -7,9 +7,9 @@ export default function Home({ navigation }) {
   return (
     <ScrollView>
       <Text style={styles.title}>Main Course</Text>
-      <CategoryList style={styles.categoryList} category="main course" navigation={navigation} />
+      <CategoryList style={styles.categoryList} category="maincourse" navigation={navigation} />
       <Text style={styles.title}>Side Dish</Text>
-      <CategoryList style={styles.categoryList} category="side dish" navigation={navigation} />
+      <CategoryList style={styles.categoryList} category="sidedish" navigation={navigation} />
       <Text style={styles.title}>Dessert</Text>
       <CategoryList style={styles.categoryList} category="dessert" navigation={navigation} />
       <Text style={styles.title}>Appetizer</Text>

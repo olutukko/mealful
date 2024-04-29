@@ -12,13 +12,13 @@ class RecipesListService {
     try {
       const response = await fetch(url);
       const data = await response.json();
-      const recipes = data.results.map((result) => {
-        return new RecipeList({
-          id: result.id,
-          title: result.title,
-          image: result.image
+      let recipes = []; // Initialize an empty array
+      if (data.results) { // Check if data.results is defined
+        recipes = data.results.map((result) => {
+          console.log('Mapping recipe:', result);  // Log each recipe data before returning
+          return new RecipeList(result.id, result.title, result.image);
         });
-      });
+      }
       
       return recipes;
     } catch (error) {

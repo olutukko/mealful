@@ -1,0 +1,44 @@
+[
+  {
+    "type": "main course"
+  },
+  {
+    "type": "side dish"
+  },
+  {
+    "type": "dessert"
+  },
+  {
+    "type": "appetizer"
+  },
+  {
+    "type": "salad"
+  },
+  {
+    "type": "bread"
+  },
+  {
+    "type": "breakfast"
+  },
+  {
+    "type": "soup"
+  },
+  {
+    "type": "beverage"
+  },
+  {
+    "type": "sauce"
+  },
+  {
+    "type": "marinade"
+  },
+  {
+    "type": "fingerfood"
+  },
+  {
+    "type": "snack"
+  },
+  {
+    "type": "drink"
+  }
+]
