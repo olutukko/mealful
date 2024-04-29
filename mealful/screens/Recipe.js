@@ -14,7 +14,7 @@ export default function Recipe({ route, navigation }) {
         const fetchRecipe = async () => {
           try {
             // const fetchedRecipe = await recipesService.fetchRecipeById(id);
-            const fetchedRecipe = await recipesService.fetchRecipeInfo(id); // Use fetchRecipeInfo method of MockRecipeInfoService
+            const fetchedRecipe = await recipesService.fetchRecipeInfo(id, isVegan); // Use fetchRecipeInfo method of MockRecipeInfoService
             setRecipe(fetchedRecipe);
           } catch (error) {
             console.error('Error fetching recipe:', error);
@@ -22,7 +22,7 @@ export default function Recipe({ route, navigation }) {
         };
     
         fetchRecipe();
-      }, []);
+      }, [isVegan]);
     
   
     return (
